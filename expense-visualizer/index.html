@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expense &amp; Budget Visualizer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+  (function() {
+    try {
+      var t = localStorage.getItem('ebv_theme');
+      if (t) {
+        document.documentElement.setAttribute('data-theme', t);
+      } else {
+        document.documentElement.setAttribute('data-theme',
+          window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+        );
+      }
+    } catch (e) {}
+  })();
+</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="errorBanner" class="error-banner hidden" role="alert" aria-live="assertive">
+    <span id="errorBannerMsg"></span>
+    <button type="button" class="error-banner__close" aria-label="Dismiss error">&times;</button>
+  </div>
+
+  <div class="app">
+
+    <header class="app__header">
+      <div class="brand">
+        <span class="brand__mark">EBV</span>
+        <h1 class="brand__title">Expense &amp; Budget Visualizer</h1>
+      </div>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark and light mode">
+        <svg class="icon icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="icon icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </header>
+
+    <section class="balance-card" aria-live="polite">
+      <span class="balance-card__label">Total Balance</span>
+      <span id="totalBalance" class="balance-card__value">$0.00</span>
+    </section>
+
+    <main class="app__main">
+
+      <section class="panel panel--form">
+        <h2 class="panel__title">Add Transaction</h2>
+        <form id="transactionForm" novalidate>
+          <div class="field">
+            <label for="itemName">Item Name</label>
+            <input type="text" id="itemName" name="itemName" placeholder="e.g. Coffee" autocomplete="off">
+            <span class="field__error" data-error-for="itemName"></span>
+          </div>
+
+          <div class="field">
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" name="amount" placeholder="0.00" step="0.01" min="0" inputmode="decimal">
+            <span class="field__error" data-error-for="amount"></span>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="type">Type</label>
+              <select id="type" name="type">
+                <option value="expense" selected>Expense</option>
+                <option value="income">Income</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="category">Category</label>
+              <select id="category" name="category">
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Fun">Fun</option>
+                <option value="__custom__">+ Add category…</option>
+              </select>
+              <input type="text" id="customCategory" class="field__custom-input hidden" placeholder="New category name" maxlength="32">
+              <span class="field__error" data-error-for="category"></span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn--primary">Add Transaction</button>
+        </form>
+      </section>
+
+      <section class="panel panel--list">
+        <div class="panel__header">
+          <h2 class="panel__title">Transactions</h2>
+          <select id="sortSelect" class="sort-select" aria-label="Sort transactions">
+            <option value="newest">Newest</option>
+            <option value="amount-desc">Amount ↓</option>
+            <option value="amount-asc">Amount ↑</option>
+            <option value="category">Category A–Z</option>
+          </select>
+        </div>
+        <ul id="transactionList" class="transaction-list"></ul>
+        <p id="emptyState" class="empty-state hidden">No transactions yet — add your first one.</p>
+      </section>
+
+      <section class="panel panel--chart">
+        <h2 class="panel__title">Spending by Category</h2>
+        <div class="chart-wrap">
+          <canvas id="categoryChart" width="280" height="280"></canvas>
+          <p id="chartEmptyState" class="empty-state hidden">Add an expense to see your breakdown.</p>
+        </div>
+        <ul id="chartLegend" class="chart-legend"></ul>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="vendor/chart.umd.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

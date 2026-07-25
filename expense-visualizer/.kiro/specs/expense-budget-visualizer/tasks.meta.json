@@ -1,0 +1,188 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "14. Manual test in Chrome, Firefox, Edge, Safari": [
+      {
+        "executionId": "7cc36a59-c74d-4acd-9f4b-be3555c95851",
+        "chatSessionId": "sess_ae44102a-07d8-4bd9-8e03-4154aad976c2",
+        "timestamp": 1784867526636
+      },
+      {
+        "executionId": "e93697df-8a80-41bb-9ddd-66928c2fbc5f",
+        "chatSessionId": "sess_3aa0355e-cb19-49ea-bc30-d704ff6b2ca2",
+        "timestamp": 1784874394722
+      }
+    ],
+    "15. Push to GitHub via GitHub Desktop, enable GitHub Pages": [
+      {
+        "executionId": "cd38c626-66cc-4a43-85a7-f497dc085a24",
+        "chatSessionId": "sess_6a2d9b5f-4380-4651-ac65-d7484a24838d",
+        "timestamp": 1784867551922
+      },
+      {
+        "executionId": "cd38c626-66cc-4a43-85a7-f497dc085a24",
+        "chatSessionId": "sess_6a2d9b5f-4380-4651-ac65-d7484a24838d",
+        "timestamp": 1784867563826
+      },
+      {
+        "executionId": "30ff39b0-6f50-4cea-8909-13352aa94c5c",
+        "chatSessionId": "sess_0962e418-2198-4dee-bfab-17002a9aaa45",
+        "timestamp": 1784939890192
+      }
+    ],
+    "20. Show a visible UI error banner when `saveToStorage()` fails during deletion in `js/app.js`; abort the delete (leave state and views unchanged) if the write throws (Req 4.5)": [
+      {
+        "executionId": "e009bbf3-9eb7-4d93-a8f4-c5ef580bf454",
+        "chatSessionId": "sess_1086e005-81a2-43ca-90ef-95734848bbb8",
+        "timestamp": 1784940183857
+      },
+      {
+        "executionId": "e009bbf3-9eb7-4d93-a8f4-c5ef580bf454",
+        "chatSessionId": "sess_1086e005-81a2-43ca-90ef-95734848bbb8",
+        "timestamp": 1784940295988
+      },
+      {
+        "executionId": "e009bbf3-9eb7-4d93-a8f4-c5ef580bf454",
+        "chatSessionId": "sess_1086e005-81a2-43ca-90ef-95734848bbb8",
+        "timestamp": 1784940462695
+      }
+    ],
+    "21. Add upper-bound check in `validate()` in `js/app.js`: reject amounts greater than `999999999.99` with the message \"Enter an amount greater than 0.\" (Req 1.5)": [
+      {
+        "executionId": "e009bbf3-9eb7-4d93-a8f4-c5ef580bf454",
+        "chatSessionId": "sess_1086e005-81a2-43ca-90ef-95734848bbb8",
+        "timestamp": 1784940184148
+      },
+      {
+        "executionId": "e009bbf3-9eb7-4d93-a8f4-c5ef580bf454",
+        "chatSessionId": "sess_1086e005-81a2-43ca-90ef-95734848bbb8",
+        "timestamp": 1784940475605
+      },
+      {
+        "executionId": "e009bbf3-9eb7-4d93-a8f4-c5ef580bf454",
+        "chatSessionId": "sess_1086e005-81a2-43ca-90ef-95734848bbb8",
+        "timestamp": 1784940531432
+      }
+    ],
+    "22. Limit custom category length in `js/app.js`: add `maxlength=\"32\"` to `#customCategory` in `index.html` and trim-then-validate that the value is no longer than 32 characters before accepting it (Req 2.3)": [
+      {
+        "executionId": "e009bbf3-9eb7-4d93-a8f4-c5ef580bf454",
+        "chatSessionId": "sess_1086e005-81a2-43ca-90ef-95734848bbb8",
+        "timestamp": 1784940184431
+      },
+      {
+        "executionId": "e009bbf3-9eb7-4d93-a8f4-c5ef580bf454",
+        "chatSessionId": "sess_1086e005-81a2-43ca-90ef-95734848bbb8",
+        "timestamp": 1784940565119
+      },
+      {
+        "executionId": "e009bbf3-9eb7-4d93-a8f4-c5ef580bf454",
+        "chatSessionId": "sess_1086e005-81a2-43ca-90ef-95734848bbb8",
+        "timestamp": 1784940717695
+      }
+    ],
+    "23. Apply secondary sort by `createdAt` descending in `getSortedTransactions()` in `js/app.js` for the Amount ↓, Amount ↑, and Category A–Z branches when primary values are equal (Req 8.4–8.6)": [
+      {
+        "executionId": "e009bbf3-9eb7-4d93-a8f4-c5ef580bf454",
+        "chatSessionId": "sess_1086e005-81a2-43ca-90ef-95734848bbb8",
+        "timestamp": 1784940184593
+      },
+      {
+        "executionId": "e009bbf3-9eb7-4d93-a8f4-c5ef580bf454",
+        "chatSessionId": "sess_1086e005-81a2-43ca-90ef-95734848bbb8",
+        "timestamp": 1784940737412
+      },
+      {
+        "executionId": "e009bbf3-9eb7-4d93-a8f4-c5ef580bf454",
+        "chatSessionId": "sess_1086e005-81a2-43ca-90ef-95734848bbb8",
+        "timestamp": 1784940787377
+      }
+    ],
+    "24. Add an inline `<script>` in the `<head>` of `index.html` (before `style.css`) that reads `ebv_theme` from `localStorage` and sets `data-theme` on `<html>` immediately, preventing a flash of wrong theme on first paint (Req 9.5)": [
+      {
+        "executionId": "e009bbf3-9eb7-4d93-a8f4-c5ef580bf454",
+        "chatSessionId": "sess_1086e005-81a2-43ca-90ef-95734848bbb8",
+        "timestamp": 1784940184767
+      },
+      {
+        "executionId": "e009bbf3-9eb7-4d93-a8f4-c5ef580bf454",
+        "chatSessionId": "sess_1086e005-81a2-43ca-90ef-95734848bbb8",
+        "timestamp": 1784940803109
+      },
+      {
+        "executionId": "e009bbf3-9eb7-4d93-a8f4-c5ef580bf454",
+        "chatSessionId": "sess_1086e005-81a2-43ca-90ef-95734848bbb8",
+        "timestamp": 1784940864128
+      }
+    ],
+    "25. Replace `outline: none` on `input:focus, select:focus` in `css/style.css` with a visible replacement focus ring (e.g. `box-shadow: 0 0 0 2px var(--accent-1)`) and add equivalent `:focus-visible` styles for buttons and the sort select (Req 12.4)": [
+      {
+        "executionId": "e009bbf3-9eb7-4d93-a8f4-c5ef580bf454",
+        "chatSessionId": "sess_1086e005-81a2-43ca-90ef-95734848bbb8",
+        "timestamp": 1784940184960
+      },
+      {
+        "executionId": "e009bbf3-9eb7-4d93-a8f4-c5ef580bf454",
+        "chatSessionId": "sess_1086e005-81a2-43ca-90ef-95734848bbb8",
+        "timestamp": 1784940881719
+      },
+      {
+        "executionId": "e009bbf3-9eb7-4d93-a8f4-c5ef580bf454",
+        "chatSessionId": "sess_1086e005-81a2-43ca-90ef-95734848bbb8",
+        "timestamp": 1784940927475
+      }
+    ],
+    "26. Change the expense amount prefix in `renderList()` in `js/app.js` from a hyphen-minus `\"-\"` to the Unicode minus sign `\"−\"` (U+2212) (Req 3.1)": [
+      {
+        "executionId": "e009bbf3-9eb7-4d93-a8f4-c5ef580bf454",
+        "chatSessionId": "sess_1086e005-81a2-43ca-90ef-95734848bbb8",
+        "timestamp": 1784940185146
+      },
+      {
+        "executionId": "e009bbf3-9eb7-4d93-a8f4-c5ef580bf454",
+        "chatSessionId": "sess_1086e005-81a2-43ca-90ef-95734848bbb8",
+        "timestamp": 1784940942274
+      }
+    ],
+    "27. Add `max-width: 40ch` to `.transaction-row__name` in `css/style.css` so the existing `text-overflow: ellipsis` rule constrains display to 40 characters (Req 3.1)": [
+      {
+        "executionId": "e009bbf3-9eb7-4d93-a8f4-c5ef580bf454",
+        "chatSessionId": "sess_1086e005-81a2-43ca-90ef-95734848bbb8",
+        "timestamp": 1784940185359
+      }
+    ],
+    "28. Manual test in Chrome, Firefox, Edge, and Safari — verify layout, interactions, and localStorage across all four browsers (Req 11.1)": [
+      {
+        "executionId": "e009bbf3-9eb7-4d93-a8f4-c5ef580bf454",
+        "chatSessionId": "sess_1086e005-81a2-43ca-90ef-95734848bbb8",
+        "timestamp": 1784940185601
+      }
+    ],
+    "29. Push to GitHub via GitHub Desktop and enable GitHub Pages on the `main` branch (Req 10)": [
+      {
+        "executionId": "e009bbf3-9eb7-4d93-a8f4-c5ef580bf454",
+        "chatSessionId": "sess_1086e005-81a2-43ca-90ef-95734848bbb8",
+        "timestamp": 1784940185990
+      }
+    ],
+    "30. Submit AWS Builder ID, repo URL, and Pages URL via Paperform": [
+      {
+        "executionId": "e009bbf3-9eb7-4d93-a8f4-c5ef580bf454",
+        "chatSessionId": "sess_1086e005-81a2-43ca-90ef-95734848bbb8",
+        "timestamp": 1784940186222
+      }
+    ],
+    "19. Add `window.confirm()` before removing a transaction in `deleteTransaction` in `js/app.js`; only call `saveToStorage()` and `render()` when the user confirms (Req 4.2, 4.4)": [
+      {
+        "executionId": "e009bbf3-9eb7-4d93-a8f4-c5ef580bf454",
+        "chatSessionId": "sess_1086e005-81a2-43ca-90ef-95734848bbb8",
+        "timestamp": 1784940204798
+      },
+      {
+        "executionId": "e009bbf3-9eb7-4d93-a8f4-c5ef580bf454",
+        "chatSessionId": "sess_1086e005-81a2-43ca-90ef-95734848bbb8",
+        "timestamp": 1784940284768
+      }
+    ]
+  }
+}
